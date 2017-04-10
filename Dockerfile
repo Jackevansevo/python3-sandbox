@@ -1,6 +1,5 @@
 FROM python:alpine
-RUN apk add --no-cache vim curl && \
+RUN apk add --no-cache vim && \
         pip install --upgrade pip && \
-        pip install ptpython && \
-        curl https://raw.githubusercontent.com/Jackevansevo/Dotfiles/master/ptpython/config.py --create-dirs -o ~/.ptpython/config.py
+        pip install ipython
 CMD "python"
